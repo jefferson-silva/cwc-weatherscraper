@@ -30,13 +30,17 @@
 
     	<div class="row">
     		<div class="col-sm-6 col-sm-offset-3">
-    			<form>
+    			<form id="weather-form">
     				<div class="form-group">
     					<input class="form-control" type="text" name="city" placeholder="Eg. London, Paris, San Francisco..." required>
     				</div>
 
-    				<input type="submit" class="input-control btn btn-success btn-lg" name="submit" value="Find My Weather">
+    				<input type="submit" class="input-control btn btn-success btn-lg" value="Find My Weather">
     			</form>
+
+                <div class="success" id="weather">
+                    
+                </div>
     		</div>
     	</div>
     </div>
@@ -45,5 +49,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $("#weather-form").submit(function (event) {
+            $.ajax({
+                url: 'scraper.php?city=' + $("#city").val(),
+                success: function (data) {
+                    
+                    $("#weather").html(data);
+                    $("#weather").fadeIn();
+
+                }
+            });
+
+            event.preventDefault();
+        });
+    </script>
 </body>
 </html>

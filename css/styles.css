@@ -22,3 +22,7 @@ input,
 p {
 	margin-top: 20px;
 }
+
+#weather {
+	display: none;
+}
