@@ -56,8 +56,12 @@
                 url: 'scraper.php?city=' + $("#city").val(),
                 success: function (data) {
                     
-                    $("#weather").html(data);
-                    $("#weather").fadeIn();
+                    if (data == "error") {
+                        $("#weather").removeClass("alert-success").addClass("alert-danger");
+                        $("#weather").html("Could not retrieve weather information.").fadeIn();
+                    } else {
+                        $("#weather").html(data).fadeIn();
+                    }
 
                 }
             });

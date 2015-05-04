@@ -1,4 +1,6 @@
 <?php
+	error_reporting(0);
+
 	if (!isset($_GET["city"]) or $_GET["city"] == "") {
 		# do nothing
 	} else {
@@ -12,8 +14,14 @@
 
 		$match = preg_match($pattern, $content, $weather);
 
-		$weather = explode ("Summary:", $weather[0])[1];
+		if ($match) {
+			$weather = explode ("Summary:", $weather[0])[1];
 
-		echo $weather;
+			echo $weather;
+		} else {
+			echo "error";
+		}
+
+		
 }
 ?>
