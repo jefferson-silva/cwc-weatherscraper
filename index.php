@@ -32,10 +32,10 @@
     		<div class="col-sm-6 col-sm-offset-3">
     			<form>
     				<div class="form-group">
-    					<input class="form-control" type="text" name="city" placeholder="Eg. London, Paris, San Francisco...">
+    					<input class="form-control" type="text" name="city" placeholder="Eg. London, Paris, San Francisco..." required>
     				</div>
 
-    				<input type="submit" class="input-control btn btn-success btn-lg" value="Find My Weather">
+    				<input type="submit" class="input-control btn btn-success btn-lg" name="submit" value="Find My Weather">
     			</form>
     		</div>
     	</div>
