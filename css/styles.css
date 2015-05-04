@@ -1,0 +1,24 @@
+html,
+body {
+	height: 100%;
+}
+
+.container {
+	background: url(../img/background.jpg) center no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+.white h1,
+.white p {
+	color: white;
+}
+
+h1 {
+	margin-top: 130px;
+}
+
+input,
+p {
+	margin-top: 20px;
+}
