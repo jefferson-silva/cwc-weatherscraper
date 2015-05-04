@@ -23,6 +23,8 @@ p {
 	margin-top: 20px;
 }
 
-#weather {
+#weather,
+#error {
 	display: none;
+	margin-top: 40px;
 }
